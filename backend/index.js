@@ -9,8 +9,10 @@ import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
 
 dotenv.config({});
+console.log("MONGO_URI =", process.env.MONGO_URI);
 
 const app = express();
+
 
 // middleware
 app.use(express.json());
@@ -23,7 +25,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 
 // api's
