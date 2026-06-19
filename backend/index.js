@@ -7,8 +7,11 @@ import userRoute from "./routes/user.route.js";
 import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
+import dns from "dns";
 
 dotenv.config({});
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 console.log("MONGO_URI =", process.env.MONGO_URI);
 
 const app = express();
